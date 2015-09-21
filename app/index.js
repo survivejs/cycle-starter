@@ -16,9 +16,7 @@ function main() {
 
 function app(drivers) {
   return {
-    DOM: Cycle.Rx.Observable.interval(1000)
-      .map(i => CycleDOM.h(
-        'h1', '' + i + ' seconds elapsed'
-      ))
+    DOM: Cycle.Rx.Observable.interval(1000).
+      map((i) => <h1>{i + ' seconds elapsed'}</h1>)
   };
 }

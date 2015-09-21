@@ -1,5 +1,6 @@
+/** @jsx hJSX */
 import Cycle from '@cycle/core';
-import CycleDOM from '@cycle/dom';
+import CycleDOM, {hJSX} from '@cycle/dom';
 
 main();
 
@@ -13,7 +14,7 @@ function main() {
   });
 }
 
-function app() {
+function app(drivers) {
   return {
     DOM: Cycle.Rx.Observable.interval(1000)
       .map(i => CycleDOM.h(
